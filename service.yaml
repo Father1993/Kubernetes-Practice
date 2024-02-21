@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: k8s-web-hello
+spec:
+  type: Loadbalancer
+  selector:
+    app: k8s-web-hello
+  ports:
+    - port: 3333
+      targetPort: 3000
